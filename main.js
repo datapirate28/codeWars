@@ -9,6 +9,9 @@ function multiply(a, b){
     return a*b
 }
 
+// =========
+// =========
+
 // second problem: Create a function that takes an integer as an argument and returns "Even" for even numbers or "Odd" for odd numbers.
 // answer
 
@@ -20,3 +23,32 @@ function evenOrOdd(num){
     }
 }
 
+// another way of dealing with this problem using ternary operator
+
+// function evenOrOdd(num){
+//     return num % 2 == 0 ? 'Even' : 'Odd';
+// }
+
+// the shortest way to deal with this problem
+
+// const evenOrOdd = (num) => num % 2 == 0 ? 'Even' : 'Odd';
+
+
+// ==========
+// ==========
+
+// third problem: Write a function to convert a name into initials. This kata strictly takes two words with one space in between them.
+
+// The output should be two capital letters with a dot separating them.
+
+// It should look like this:
+
+// Sam Harris => S.H
+
+// patrick feeney => P.F
+
+function abbrvName(name){
+    const nameArr = name.split(' ');
+    const [firstName, lastName] = nameArr;
+    return `${firstName[0].toUpperCase()}.${lastName[0].toUpperCase()}`
+}
