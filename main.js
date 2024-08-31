@@ -57,7 +57,7 @@ function abbrvName(name){
 // ==========
 // ==========
 
-// fourht problem
+// fourth problem
 
 // We need a function that can transform a number (integer) into a string.
 
@@ -66,3 +66,33 @@ function numberToString(num){
 }
 
 console.log(numberToString(10));
+
+// another way of tackling this problem is using global string() function; The String() function is a global function in JavaScript that converts its argument to a string. 
+function numberToString(num){
+    return String(num);
+}
+
+// another way: When you put a non-string value (like a number) inside ${} in a template literal, JavaScript automatically converts it to a string.
+
+// const numberToString = num => `${num}`;
+
+// ==========
+// ==========
+
+// fifth problem
+
+// Complete the solution so that it reverses the string passed into it.
+// output should look like this: 
+//'world'  =>  'dlrow'
+//'word'   =>  'drow'
+
+function reverseString(str){
+    let strArray = str.split('');
+    let strReverse = strArray.reverse();
+    let strResult = strReverse.join('');
+
+    return strResult;
+}
+
+let reverseResult = reverseString('Pirate28');
+console.log(reverseResult);
