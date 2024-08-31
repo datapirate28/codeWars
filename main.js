@@ -96,3 +96,29 @@ function reverseString(str){
 
 let reverseResult = reverseString('Pirate28');
 console.log(reverseResult);
+
+
+//consise way of coping with this problem: chainig the methods
+
+function reverseString(str){
+    return str.split('').reverse().join('');
+}
+
+// ==========
+// ==========
+
+// sixth problem
+
+// you are given a number and have to make it negative. But maybe the number is already negative?
+// makeNegative(1);    // return -1
+// makeNegative(-5);   // return -5
+// makeNegative(0);    // return 0
+// makeNegative(0.12); // return -0.12
+
+function makeNegative(num) {
+        return -Math.abs(num);
+}
+
+// just want to remind you that -0 is treated as 0 in JS.
+
+
