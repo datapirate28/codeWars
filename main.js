@@ -52,3 +52,17 @@ function abbrvName(name){
     const [firstName, lastName] = nameArr;
     return `${firstName[0].toUpperCase()}.${lastName[0].toUpperCase()}`
 }
+
+
+// ==========
+// ==========
+
+// fourht problem
+
+// We need a function that can transform a number (integer) into a string.
+
+function numberToString(num){
+    return num.toString();
+}
+
+console.log(numberToString(10));
