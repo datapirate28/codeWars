@@ -121,4 +121,23 @@ function makeNegative(num) {
 
 // just want to remind you that -0 is treated as 0 in JS.
 
+// another way of coping with this problem:
+
+function makeNegative(num) {
+    return num <= 0 ? num : num*-1;
+}
+
+
+// ==========
+// ==========
+
+// seventh problem
+
+// It's pretty straightforward. Your goal is to create a function that removes the first and last characters of a string. You're given one parameter, the original string. You don't have to worry about strings with less than two characters.
+
+function removeChar(str){
+    let removeFirstAndLastCharacter = str.slice(1, -1)
+    return removeFirstAndLastCharacter;
+}
+
 
