@@ -183,3 +183,33 @@ function areYouPlayingBanjo(name){
 function areYouPlayingBanjoConciseWay(name){
     return name === 'R' && 'r' ? `${name} plays banjo.` : `${name} do not play banjo.`;
 }
+
+
+// ==========
+// ==========
+
+// ninth problem
+// write a function that camelize a given a string as below.
+// camelize("background-color") == 'backgroundColor';
+
+// detailed way of dealing with this problem:
+function camelizeString(word){
+    return word 
+        .split('-') // we change the string into an array
+        .map(
+            function(word, index){ // now since it is an array, we will try access the array elements and do the capitalizaion.
+                if(index == 0){
+                    return word;
+                }else{
+                    return word[0].toUpperCase() + word.slice(1);
+                }
+            } 
+        )
+        .join('');
+}
+
+// concise way of dealing with this problem:
+
+const camelizeWord = word => word.split('-').map((word, index) => index == 0 ? word : word[0].toUpperCase() + word.slice(1)).join('');
+
+camelizeWord('background-color');
