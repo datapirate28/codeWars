@@ -140,4 +140,46 @@ function removeChar(str){
     return removeFirstAndLastCharacter;
 }
 
+// concise way:
 
+function removeChar(str){
+    return str.slice(1, -1);
+}
+
+// try to understand the difference between .slice and .substring methods for string
+// https://www.youtube.com/watch?v=PxD4cwADFys
+
+
+// another way of dealing with this problem:
+
+function removeChar(str){
+    //You got this!
+     str1 = str.split('');
+     str1.shift();
+     str1.pop();
+     return str1.join('');
+       
+};
+
+// ==========
+// ==========
+
+// eightth problem
+// Create a function which answers the question "Are you playing banjo?".
+// If your name starts with the letter "R" or lower case "r", you are playing banjo!
+
+// detailed way of dealing with the problem:
+
+function areYouPlayingBanjo(name){
+    if(name[0] === 'R' && 'r'){
+        return `${name} plays banjo.`
+    }else{
+        return `${name} do not play banjo.`
+    }
+}
+
+// concise of dealing with the problem:
+
+function areYouPlayingBanjoConciseWay(name){
+    return name === 'R' && 'r' ? `${name} plays banjo.` : `${name} do not play banjo.`;
+}
