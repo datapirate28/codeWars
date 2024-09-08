@@ -171,17 +171,31 @@ function removeChar(str){
 // detailed way of dealing with the problem:
 
 function areYouPlayingBanjo(name){
-    if(name[0] === 'R' && 'r'){
+    if(name[0] == 'R' || name[0] == 'r'){
         return `${name} plays banjo.`
     }else{
-        return `${name} do not play banjo.`
+        return `${name} does not play banjo.`
     }
 }
 
 // concise of dealing with the problem:
 
 function areYouPlayingBanjoConciseWay(name){
-    return name === 'R' && 'r' ? `${name} plays banjo.` : `${name} do not play banjo.`;
+    return name[0] == 'R' || name[0] == 'r' ? `${name} plays banjo.` : `${name} does not play banjo.`;
+}
+
+// another way of dealing with this problem:
+
+function areYouPlayingBanjo(name) {
+    return name[0].toLowerCase() == "r" ? name + " plays banjo" : name + " does not play banjo";
+}
+
+// another way: 
+
+function areYouPlayingBanjo(name) {
+    if (name.startsWith("R") || name.startsWith("r")) {
+      return name + " plays banjo";
+    } else return name + " does not play banjo";
 }
 
 
@@ -212,4 +226,33 @@ function camelizeString(word){
 
 const camelizeWord = word => word.split('-').map((word, index) => index == 0 ? word : word[0].toUpperCase() + word.slice(1)).join('');
 
-camelizeWord('background-color');
+
+// ==========
+// ==========
+
+// tenth problem
+// Create a function with two arguments that will return an array of the first n multiples of x.
+// Assume both the given number and the number of times to count will be positive numbers greater than 0.
+// attached is the example: 
+
+// countBy(1,10) === [1,2,3,4,5,6,7,8,9,10]
+// countBy(2,5) === [2,4,6,8,10]
+
+function countBy(x, n){
+    let result = [];
+    for(let i = 1; i<=n; i++){
+        result.push(x*i);
+    }
+
+    return result;
+}
+
+// another way of dealing with this problem:
+
+function countByConcise(x, n) {
+    var result = [];
+    for (var i=x; i<=(x*n); i+=x){
+    result.push(i);
+    }
+    return result;
+}
