@@ -325,3 +325,17 @@ const summation = num => num * (num + 1)/2;
 function goals(laligGoals, copaDelReyGoals, championsLeagueGoals){
     return Number(laligGoals+copaDelReyGoals+championsLeagueGoals);
 }
+
+// another way of dealing with this problem:
+
+const goalsTotal = (...a) => a.reduce((a,b) => a+b, 0);
+
+// note: The ...a syntax allows the function to accept any number of arguments, which are collected into an array named a.
+
+// another way of coping with this particular problem:
+
+function goalsCombined(laligGoals, copaDelReyGoals, championsLeagueGoals){
+    let goals = [laligGoals, copaDelReyGoals, championsLeagueGoals];
+    return goals.reduce((a, b) => a + b, 0)
+}
+
