@@ -301,3 +301,7 @@ function findSummation(userInput){
     return result;
 }
 
+
+// another way of dealing with this problem:
+
+const summation = num => num * (num + 1)/2;
