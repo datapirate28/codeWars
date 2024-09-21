@@ -361,3 +361,9 @@ function isTimmySarahInLove(flower1, flower2){
 function isTimmySarahInLove(flower1, flower2){
     return (flower1 % 2 == 0 && flower2 % 2 != 0) || (flower1 % 2 != 0 && flower2 % 2 == 0) ? true : false;
 }
+
+// effective way of dealing with this problem:
+
+function isTimmySarahInLove(flower1, flower2){
+    return flower1 % 2 !== flower2 % 2;
+}
