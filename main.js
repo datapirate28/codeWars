@@ -172,9 +172,9 @@ function removeChar(str){
 
 function areYouPlayingBanjo(name){
     if(name[0] == 'R' || name[0] == 'r'){
-        return `${name} plays banjo.`
+        return ` ${name} plays banjo.`
     }else{
-        return `${name} does not play banjo.`
+        return ` ${name} does not play banjo.`
     }
 }
 
@@ -339,3 +339,25 @@ function goalsCombined(laligGoals, copaDelReyGoals, championsLeagueGoals){
     return goals.reduce((a, b) => a + b, 0)
 }
 
+
+// ==========
+// ==========
+
+// 13. problem
+// Timmy & Sarah think they are in love, but around where they live, they will only know once they pick a flower each. If one of the flowers has an even number of petals and the other has an odd number of petals it means they are in love.
+
+// Write a function that will take the number of petals of each flower and return true if they are in love and false if they aren't.
+
+function isTimmySarahInLove(flower1, flower2){
+    if((flower1 % 2 == 0 && flower2 % 2 != 0) || (flower1 % 2 != 0 && flower2 % 2 == 0)){
+        return true;
+    }else{ 
+        return false;
+    }
+}
+
+// concise way of dealing with this problem:
+
+function isTimmySarahInLove(flower1, flower2){
+    return (flower1 % 2 == 0 && flower2 % 2 != 0) || (flower1 % 2 != 0 && flower2 % 2 == 0) ? true : false;
+}
